@@ -52,8 +52,8 @@ $(".noEnemy").empty();
 //writing each characters full name to the html so they show up on the page.
 $(".name00").html(characters.Oishi.fullName);
 $(".name01").html(characters.Asano.fullName);
-$(".name02").html(characters.Kimura.fullName);
-$(".name03").html(characters.Kira.fullName);
+$(".name02").html(characters.Kira.fullName);
+$(".name03").html(characters.Kimura.fullName);
 
 //adding the picture for each character so they show up on the page.
 $("#oishi").appendTo("#picRow");
@@ -66,19 +66,12 @@ $(".oishihp").html(characters.Oishi.healthPoints);
 $(".asanohp").html(characters.Asano.healthPoints);
 $(".kirahp").html(characters.Kira.healthPoints);
 $(".kimurahp").html(characters.Kimura.healthPoints);
-
-// reset border colors. 
-$(".firstRow").css({"background-color": "white", "outline-color": "limegreen", 
-"border-width": "3px", "outline-style": "solid", "border-color": "white", "outline-width": "3px"});
-
-};
-
-// array to hold each characters stats.
+}
 var characters = { 
 
 Oishi: {
     name: "Oishi",
-    visual:("src", "../unit-4-game/assets/images/Oishi.jpeg"),
+    visual: '../unit-4-game/assets/images/Oishi.jpeg',
     healthPoints: 120,
     attackPower: 8,
     fullName: "Oishi: Ronin Leader",
@@ -114,7 +107,7 @@ Kimura:{
 };
 
 
-// $(document).ready(function(){
+ $(document).ready(function(){
 reset();
 
 // When the player clicks on any of the characters, the game determines which one was clicked, moves the one clicked into
@@ -157,15 +150,15 @@ $(".firstRow").click(function(){
            attackerCAP = characters.Kimura.counterAttackPower;
            attackerFN = characters.Kimura.fullName;
            attack = characters.Kimura;
-   }
+   };
           
    // clones the three remaining characters to "Enemies available to attack" three separate divs.
    for (var i = 0; i < 4; i++) {
        $("._" + [i]).not(myChar).appendTo("#enemies" + [i]);
 
        // changing color
-       $("._" + [i]).not(myChar).css({"background-color": "red", "outline-color": "black", 
-           "border-width": "3px", "outline-style": "solid", "border-color": "black", "outline-width": "1px"});
+    //    $("._" + [i]).not(myChar).css({"background-color": "red", "outline-color": "black", 
+    //        "border-width": "3px", "outline-style": "solid", "border-color": "black", "outline-width": "1px"});
 
 
    }
@@ -329,4 +322,4 @@ $(".attackButton").click(function(){
 
 
 // The game remembers every time you attack and slowly increases your attack power. 
-
+ });
