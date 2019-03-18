@@ -30,16 +30,16 @@ var myDef = "";
 
 
 // reset health points.
-characters.ronin1.healthPoints = 120;
-characters.ronin2.healthPoints = 100;
-characters.official3.healthPoints = 150;
-characters.ronin4.healthPoints = 180;
+characters.Oishi.healthPoints = 120;
+characters.Asano.healthPoints = 100;
+characters.Kira.healthPoints = 150;
+characters.Kimura.healthPoints = 180;
 
 // reset attack power.
-characters.ronin1.attackPower = 8;
-characters.ronin2.attackPower = 10;
-characters.official3.attackPower = 10;
-characters.ronin4.attackPower = 12;
+characters.Oishi.attackPower = 8;
+characters.Asano.attackPower = 10;
+characters.Kira.attackPower = 10;
+characters.Kimura.attackPower = 12;
 
 // delete all in-game text.
 $(".youAttacked").empty();
@@ -50,10 +50,10 @@ $(".youLose").empty();
 $(".noEnemy").empty();
 
 //writing each characters full name to the html so they show up on the page.
-$(".name00").html(characters.ronin1.fullName);
-$(".name01").html(characters.ronin2.fullName);
-$(".name02").html(characters.official3.fullName);
-$(".name03").html(characters.ronin4.fullName);
+$(".name00").html(characters.Oishi.fullName);
+$(".name01").html(characters.Asano.fullName);
+$(".name02").html(characters.Kimura.fullName);
+$(".name03").html(characters.Kira.fullName);
 
 //adding the picture for each character so they show up on the page.
 $("#oishi").appendTo("#picRow");
@@ -78,7 +78,7 @@ var characters = {
 
 Oishi: {
     name: "Oishi",
-    visual:'../unit-4-game/assets/images/Oishi.jpeg',
+    visual:("src", "../unit-4-game/assets/images/Oishi.jpeg"),
     healthPoints: 120,
     attackPower: 8,
     fullName: "Oishi: Ronin Leader",
@@ -114,7 +114,7 @@ Kimura:{
 };
 
 
-$(document).ready(function(){
+// $(document).ready(function(){
 reset();
 
 // When the player clicks on any of the characters, the game determines which one was clicked, moves the one clicked into
@@ -329,4 +329,4 @@ $(".attackButton").click(function(){
 
 
 // The game remembers every time you attack and slowly increases your attack power. 
-});
+
