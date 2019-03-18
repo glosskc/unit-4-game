@@ -156,9 +156,7 @@ $(".firstRow").click(function(){
    for (var i = 0; i < 4; i++) {
        $("._" + [i]).not(myChar).appendTo("#enemies" + [i]);
 
-       // changing color
-    //    $("._" + [i]).not(myChar).css({"background-color": "red", "outline-color": "black", 
-    //        "border-width": "3px", "outline-style": "solid", "border-color": "black", "outline-width": "1px"});
+       
 
 
    }
@@ -248,7 +246,7 @@ $(".attackButton").click(function(){
      // the game subtracks the attackers AP points from the defenders HP.)
      defenderHP = (defenderHP - attackerAP);
 
-     // writing the text "Luke Skywalker attacked you back for 10 damage."
+     
      $(".attackedBack").html(defenderFN + " attacked you back for " + defenderCAP + " damage.");
     
     // write the defender's new healthpoints to the html.
